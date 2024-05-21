@@ -1,10 +1,10 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-// import java.util.Collection;
-import java.util.Collections;
+// import java.util.ArrayList;
+// import java.util.Arrays;
+// // import java.util.Collection;
+// import java.util.Collections;
 
-public class RearrageSign {
-
+// public class RearrageSign {
+    //Better Approach 
     // public static int [] Rearrage(int arr[], int n){
     //     // Create Array POS and Neg
     //     ArrayList<Integer> pos = new ArrayList<>();
@@ -32,42 +32,37 @@ public class RearrageSign {
     //     }
     // }
 
-    public static ArrayList <Integer> Rearrage(ArrayList <Integer>arr){
-        int n = arr.size();
-
-        // Create Array Ans  - Collection stores n number of Zeros.
-        ArrayList <Integer> ans = new ArrayList<>(Collections.nCopies(n, 0)) ;
-        
-        int pos = 0; 
-        int neg = 1;
-        for(int i =0; i<n ; i++){
-            if(arr.get(i)>0){
-                ans.set(pos, arr.get(i));
-                pos += 2;
-            }
-            else{
-                ans.set(neg, arr.get(i));
-                neg +=2;
-            }
-
-        }
-        return ans;
-       
-
-    }
-    public static void main(String[] args) {
-        // Array Initialization.
-        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, -4, -5));
-        ArrayList<Integer> ans = Rearrage(arr);
-
-        for (int i = 0; i < ans.size(); i++) {
-            System.out.print(ans.get(i) + " ");
-        }
-    }
-}
+    //Optimal Apprach 
+//     public static ArrayList <Integer> Rearrage(ArrayList <Integer>arr){
+//         int n = arr.size();
+//         // Create Array Ans  - Collection stores n number of Zeros.
+//         ArrayList <Integer> ans = new ArrayList<>(Collections.nCopies(n, 0)) ; 
+//         int pos = 0; 
+//         int neg = 1;
+//         for(int i =0; i<n ; i++){
+//             if(arr.get(i)>0){
+//                 ans.set(pos, arr.get(i));
+//                 pos += 2;
+//             }
+//             else{
+//                 ans.set(neg, arr.get(i));
+//                 neg +=2;
+//             }
+//         }
+//         return ans;
+//     }
+//     public static void main(String[] args) {
+//         // Array Initialization.
+//         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, -4, -5));
+//         ArrayList<Integer> ans = Rearrage(arr);
+//         for (int i = 0; i < ans.size(); i++) {
+//             System.out.print(ans.get(i) + " ");
+//         }
+//     }
+// }
 
 
-// Variety 2 - If the array size is not same .
+// Variety 2 - If the array size is not same 
 // public class Main {
 //     public static void main(String[] args) {
 //         // Array Initialization
