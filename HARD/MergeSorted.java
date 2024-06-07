@@ -103,17 +103,12 @@ public class MergeSorted {
             arr2[ind2] = temp;
         }
     }
-
     public static void merge(long[] arr1, long[] arr2, int n, int m) {
-
         // len of the imaginary single array:
         int len = n + m;
-
         // Initial gap:
         int gap = (len / 2) + (len % 2);
-
         while (gap > 0) {
-            // Place 2 pointers:
             int left = 0;
             int right = left + gap;
             while (right < len) {
@@ -134,7 +129,6 @@ public class MergeSorted {
             }
             // break if iteration gap=1 is completed:
             if (gap == 1) break;
-
             // Otherwise, calculate new gap:
             gap = (gap / 2) + (gap % 2);
         }
