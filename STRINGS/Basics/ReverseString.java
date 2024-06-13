@@ -19,7 +19,7 @@ public class ReverseString {
         }
 
         for (int i = 0; i < reverse.length(); i++) {
-            System.out.println(ch[i] + "");
+            System.out.print(ch[i] + "");
         }
     }
 }
