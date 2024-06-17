@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class SortCharFreq {
 
-    public String frequencySort(String s) {
+    public static String frequencySort(String s) {
 
         StringBuilder ans = new StringBuilder();
         Map <Character , Integer > hm = new HashMap<>();
@@ -24,5 +24,11 @@ public class SortCharFreq {
             }
         }  
         return ans.toString() ;
+    }
+    public static void main(String[] args) {
+        String s = "tree";
+
+        String result = frequencySort(s);
+        System.out.println(result);
     }
 }
