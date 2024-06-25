@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class CountInversion {
+    //Brute Force Approach
     // public static int numberOfInversions(int[] a, int n) {
     //     // Count the number of pairs:
     //     int cnt = 0;
@@ -23,12 +24,9 @@ public class CountInversion {
         ArrayList<Integer> temp = new ArrayList<>(); // temporary array
         int left = low;      // starting index of left half of arr
         int right = mid + 1;   // starting index of right half of arr
-
         //Modification 1: cnt variable to count the pairs:
         int cnt = 0;
-
         //storing elements in the temporary array in a sorted manner//
-
         while (left <= mid && right <= high) {
             if (arr[left] <= arr[right]) {
                 temp.add(arr[left]);
@@ -39,9 +37,7 @@ public class CountInversion {
                 right++;
             }
         }
-
         // if elements on the left half are still left //
-
         while (left <= mid) {
             temp.add(arr[left]);
             left++;
